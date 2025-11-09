@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font-family: "Work Sans", sans-serif; */
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #242424;
+  background: linear-gradient(133deg, rgb(0, 0, 0) 3%, rgb(0, 23, 27) 50%, rgb(0, 26, 37) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242424", endColorstr="#005478", GradientType=0);
+  overflow-y: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 2.2rem 3rem;
+  width: 100%;
+  height: 100vh;
+  transition: all ease .3s;
+}
+
+main header {
+  position: absolute;
+  right: 50px;
+}
+
+main header .colors {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+main header .colors button {
+  padding: 1rem;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  outline: none;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+main header .colors button:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.808);
+}
+
+main header .colors .lightgrey {
+  background: #233D48;
+}
+
+main header .colors .white {
+  background: #ffffff;
+  border: 1px solid rgb(148, 148, 148);
+}
+
+main header .colors .black {
+  background: #000000;
+}
+
+main section {
+  margin-top: 6rem;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all ease .3s;
+}
+
+main section h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 6rem;
+  word-spacing: .1rem;
+  font-weight: 400;
+  margin: 0 0 2rem 0;
+  width: 100%;
+  height: 100px;
+  animation: animated-text 2s steps(11, end) 0.5s 1 normal both, darker-animated-cursor 750ms steps(11, end) infinite;
+  overflow: hidden;
+  border-right: solid 3px rgba(0, 0, 0, 0.75);
+}
+
+
+@keyframes animated-text {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 500px;
+  }
+}
+
+@keyframes darker-animated-cursor {
+  0% {
+    border-right-color: #01394c;
+  }
+  
+  100% {
+    border-right-color: transparent;
+  }
+}
+
+darker-animated-cursor animation {
+  border-right-color: rgba(1, 57, 76, 0.82);
+}
+
+animated-text animation {
+  width: calc(0% + 480px);
+}
+
+main section .input {
+  display: inline-flex;
+  width: 100vmin;
+  margin-bottom: 2rem;
+}
+
+
+main section .input input {
+  width: 80%;
+  padding: .7rem 1rem;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #00455c;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  transition: all .3s ease;
+}
+
+main section .input input:hover {
+  background-color: #00394b;
+}
+
+main section .input input::placeholder {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+main section .input button {
+  padding: .6rem 1rem;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #003342;
+  color: white;
+  font-size: 1rem;
+  transition: .3s ease all;
+}
+
+main section .input button:hover {
+  background-color: #00232e;
+}
+
+main section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+main section ul li {
+  display: inline-flex;
+  gap: .8rem;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: .3rem 1rem;
+  font-size: 1.3rem;
+  background-color: #00455c;
+  border-radius: 50px;
+  margin: .3rem 0;
+}
+
+main section ul li button {
+  padding: .4rem;
+  background-color: #003342;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+main section ul li button svg {
+  width: 100%;
+  height: 100%;
+}
+
+main section ul li button:hover {
+  background-color: #00232e;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+
+.fallanim {
+  animation: fallAnim .4s ease-in forwards;
+}
+
+@keyframes fallAnim {
+  0% {
+    opacity: 1;
+    transform: rotateZ(0) translateY(0);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: rotateZ(10deg) translateY(200px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotateZ(25deg) translateY(400px);
+  }
+}
+
+.white-theme {
+  background: #9deafa;
+  background: linear-gradient(133deg, rgba(157, 234, 250, 1) 3%, rgba(207, 231, 255, 1) 51%, rgba(255, 255, 255, 1) 98%);
+  transition: all .3s ease;
+}
+
+.grey-theme {
+  background: #525354;
+  background: linear-gradient(133deg, rgba(82, 83, 84, 1) 3%, rgba(50, 68, 75, 1) 51%, rgba(12, 49, 65, 1) 98%);
+  transition: all .3s ease;
+}
+
+.black-theme {
+  background: #242424;
+  background: linear-gradient(133deg, rgb(0, 0, 0) 3%, rgb(0, 23, 27) 50%, rgb(0, 26, 37) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242424", endColorstr="#005478", GradientType=0);
+  transition: all .3s ease;
+}
+
+.white-color {
+  transition: all .3s ease;
+  color: white;
+}
+
+.black-color {
+  transition: all .3s ease;
+  color: black;
+}
+
+.grey-color {
+  transition: all .3s ease;
+  color: #FFDFDB;
+}
+
+#date-time {
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
